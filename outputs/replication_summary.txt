@@ -1,0 +1,36 @@
+Replication Summary
+
+Paper: Bucci (2020), Realized Volatility Forecasting with Neural Networks
+Dataset: S&P 500 monthly log realized volatility
+Raw sample: 1950-02-28 to 2017-12-31
+Monthly observations: 815
+
+Implementation:
+The script compares a Random Walk benchmark, AR(1), HAR, and a feed-forward MLP neural network.
+Forecasts are evaluated for 1-month-ahead and 5-month-ahead horizons.
+Evaluation metrics are MSE, RMSE, MAE, and QLIKE.
+Diebold-Mariano tests compare AR(1), HAR, and MLP against the Random Walk benchmark using squared-error loss.
+
+Training/testing split:
+1-month ahead: 641 training observations, 161 testing observations
+5-month ahead: 638 training observations, 160 testing observations
+
+Best model by RMSE:
+1-month ahead: HAR, RMSE = 0.4026
+5-month ahead: HAR, RMSE = 0.4722
+
+Generated tables:
+- model_comparison_results.csv
+- diebold_mariano_tests.csv
+- model_predictions_1_step.csv
+- model_predictions_5_step.csv
+
+Generated figures:
+- monthly_realized_volatility.png
+- actual_vs_predicted_rv_1_step.png
+- actual_vs_predicted_rv_5_step.png
+- crisis_period_forecasts.png
+- model_rmse_comparison.png
+
+Interpretation:
+This is a simplified Python replication of Bucci (2020). It reproduces the realized-volatility construction and compares traditional benchmarks with a feed-forward neural network. It does not fully reproduce the paper's LSTM, NARX, macro-financial predictors, or Model Confidence Set procedure, so any difference from the paper's conclusions should be interpreted as arising from the simplified model set and predictor set.

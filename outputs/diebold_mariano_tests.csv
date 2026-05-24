@@ -1,0 +1,7 @@
+Horizon,Benchmark,Model,DM_statistic,p_value,Interpretation
+1-month ahead,Random Walk,AR(1),-0.37320241358359896,0.7089977999598125,positive DM means model improves on Random Walk
+1-month ahead,Random Walk,HAR,0.11871952050766917,0.9054975707935322,positive DM means model improves on Random Walk
+1-month ahead,Random Walk,MLP,-2.2112081647662443,0.027021425250172815,positive DM means model improves on Random Walk
+5-month ahead,Random Walk,AR(1),1.40018927829046,0.16145664565960383,positive DM means model improves on Random Walk
+5-month ahead,Random Walk,HAR,1.5977056959497513,0.11010849052569482,positive DM means model improves on Random Walk
+5-month ahead,Random Walk,MLP,-0.7001058708550499,0.48386118971433145,positive DM means model improves on Random Walk
